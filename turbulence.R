@@ -1,6 +1,6 @@
 library(readxl)
 
-Offramp_Zonzeel <- read_excel("D:/salilsharma/SurfDrive/My Documents/Files/Documentation/Lane change/Data/Turbulence.xlsx", 
+Offramp_Zonzeel <- read_excel("Turbulence.xlsx", 
                          sheet = "Off-ramp-Zonzeel")
 
 library(dplyr)
@@ -11,7 +11,7 @@ Offramp <- Offramp_Zonzeel %>%
             TRUE ~ 'Category 3'))
 
 
-Onramp_Zonzeel <- read_excel("D:/salilsharma/SurfDrive/My Documents/Files/Documentation/Lane change/Data/Turbulence.xlsx", 
+Onramp_Zonzeel <- read_excel("Turbulence.xlsx", 
                               sheet = "On-ramp-Zonzeel")
 
 Onramp <- Onramp_Zonzeel %>%
@@ -52,7 +52,7 @@ P1 <- grid.arrange(R1, R2, ncol = 1, nrow = 2)
 
 ggsave("ramps.eps", P1, dpi = 600, width = 8, height = 6, units = "in")
 
-Prin_east <- read_excel("D:/salilsharma/SurfDrive/My Documents/Files/Documentation/Lane change/Data/Turbulence.xlsx", 
+Prin_east <- read_excel("Turbulence.xlsx", 
                              sheet = "Princeville_east")
 
 Weaving_diverge <- Prin_east %>%
@@ -60,7 +60,7 @@ Weaving_diverge <- Prin_east %>%
                           Len <= 12 ~ 'Category 2',
                           TRUE ~ 'Category 3'))
 
-Prin_west <- read_excel("D:/salilsharma/SurfDrive/My Documents/Files/Documentation/Lane change/Data/Turbulence.xlsx", 
+Prin_west <- read_excel("Turbulence.xlsx", 
                              sheet = "Princeville_west")
 
 Weaving_merge <- Prin_west %>%
@@ -93,10 +93,10 @@ P2 <- grid.arrange(R4, R3, ncol = 1, nrow = 2)
 ggsave("long_weaving.eps", P2, dpi = 600, width = 8, height = 6, units = "in")
 
 
-Kla_north <- read_excel("D:/salilsharma/SurfDrive/My Documents/Files/Documentation/Lane change/Data/Turbulence.xlsx", 
+Kla_north <- read_excel("Turbulence.xlsx", 
                         sheet = "Kla_north")
 
-Kla_south <- read_excel("D:/salilsharma/SurfDrive/My Documents/Files/Documentation/Lane change/Data/Turbulence.xlsx", 
+Kla_south <- read_excel("Turbulence.xlsx", 
                         sheet = "Kla_south")
 
 Short_Weaving_diverge <- Kla_south %>%
